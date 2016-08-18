@@ -241,7 +241,7 @@ public class nick_bot {
       } else if (line.contains("`staff")) {
         commandParser comm = new commandParser(line);
         if (comm.getPostCommandRaw() != null) {
-          postSlack("@channel " + comm.getUser() + " (" + comm.getService() + "): " + comm.getPostCommandRaw());
+          postSlack("<!channel> " + comm.getUser() + " (" + comm.getService() + "): " + comm.getPostCommandRaw());
         } else {
           sendUser(comm.getService(), comm.getUser(), "Please include a statement!");
         }
